@@ -1,0 +1,104 @@
+.desktop {
+    background-color: #000000;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    width: 100vw;
+}
+
+.desktop .div {
+    background-color: #000000;
+    width: 90%; /* Use percentage for responsiveness */
+    max-width: 1440px; /* Maintain max width */
+    height: 900px;
+    position: relative;
+}
+
+.desktop .frame {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 30%; /* Use percentage for positioning */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Centering adjustment */
+}
+
+.desktop .welcome-to-devantra {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Jomolhari-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 48px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    opacity: 0; /* Start hidden for animation */
+    animation: popup 1s ease-in-out forwards; /* Comprehensive Popup animation */
+}
+
+.desktop .line {
+    position: absolute;
+    width: 392px;
+    height: 1px;
+    top: 60%; /* Adjusted for responsiveness */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Centering adjustment */
+    animation: slideIn 1s ease-in; /* Slide-in animation */
+}
+
+.desktop .img {
+    position: absolute;
+    width: 413px;
+    height: 12px;
+    top: -4px;
+    left: 0;
+}
+
+/* Animation Keyframes */
+@keyframes popup {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .desktop .welcome-to-devantra {
+        font-size: 32px; /* Adjust font size for smaller screens */
+    }
+    .desktop .line {
+        width: 80%; /* Adjust line width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .desktop .welcome-to-devantra {
+        font-size: 24px; /* Further adjust font size for mobile */
+    }
+    .desktop .line {
+        width: 70%; /* Further adjust line width for mobile */
+    }
+}

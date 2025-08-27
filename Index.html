@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body class="head">
+        <div class="desktop">
+            <div class="div">
+                <div class="frame">
+                    <div class="welcome-to-devantra">Welcome to,<br />Devantra Community</div>
+                </div>
+            </div>
+        </div>
+
+       <script>
+        document.querySelectorAll(".head").forEach(function(el) 
+            {
+                el.addEventListener("click", function() {
+                window.location.href = "../useCase/home.html";
+                });
+            });
+       </script> 
+    </body>
+</html>
